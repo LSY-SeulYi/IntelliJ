@@ -19,6 +19,7 @@ public class Guestbook extends BaseEntity {
     @Column(length = 100, nullable = false)
     private String title;
 
+    @Lob
     @Column(length = 1500, nullable = false)
     private String content;
 

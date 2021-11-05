@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
 
     <th:block th:fragment="content">
 
-        <h1 class="mt-4">GuestBook Register Page</h1>
+        <h1 class="mt-4">게시판</h1>
 
         <form th:action="@{/guestbook/register}" th:method="post">
             <div class="form-group">
@@ -22,6 +22,8 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a th:href="list"> <button type="button" class="btn btn-info listBtn">List</button></a>
+
         </form>
 
     </th:block>
